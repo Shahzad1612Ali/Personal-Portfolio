@@ -1,0 +1,1006 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: myMashetic;
+  src: url("/Mashetic-Font.otf");
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+body {
+  background-color: #000033;
+  color: white;
+  overflow-x: hidden;
+}
+body nav {
+  width: 100vw;
+  height: 12vh;
+  background-color: #80fbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+}
+body nav #DesktopView {
+  width: 96vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+body nav #DesktopView h2 {
+  font-size: 36px;
+}
+body nav #DesktopView ul {
+  width: 65vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+body nav #DesktopView ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: #000033;
+  padding: 10px 20px 10px 20px;
+  font-weight: bold;
+  color: #80fbff;
+  box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+  border-radius: 5px;
+}
+body nav #DesktopView ul li a:hover {
+  background-color: rgb(0, 94, 16);
+  box-shadow: 0 0 10px 5px yellow;
+  color: white;
+  cursor: pointer;
+}
+body nav #MobileView {
+  width: 96vw;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body nav #MobileView img {
+  cursor: pointer;
+}
+body main {
+  width: 100vw;
+  min-height: 88vh;
+  padding-top: 24vh;
+}
+body main .Home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+body main .Home .homeContent {
+  width: 75vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .Home .homeContent .about {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+body main .Home .homeContent .about p {
+  margin-bottom: 15px;
+}
+body main .Home .homeContent .about .hello {
+  font-size: 36px;
+}
+body main .Home .homeContent .about .name {
+  font-size: 36px;
+  font-weight: bold;
+}
+body main .Home .homeContent .about .jobTitles {
+  font-size: 18px;
+}
+body main .Home .homeContent .about .btn {
+  width: 40vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+body main .Home .homeContent .about .btn a {
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  margin-right: 20px;
+  background-color: #80fbff;
+  color: #000033;
+  box-shadow: 0 0 10px 5px white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+body main .Home .homeContent .about .btn a:hover {
+  background-color: transparent;
+  color: white;
+}
+body main .Home .homeContent .profilePic {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .Home .homeContent .profilePic img {
+  width: 100%;
+  height: auto; /* Adjust the height to keep the aspect ratio */
+  max-height: 100%; /* Prevents the image from exceeding the container */
+  filter: drop-shadow(10px 10px 15px white);
+}
+body main .myAbout {
+  width: 100vw;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body main .myAbout .introHeading {
+  padding-top: 12vh;
+  color: #80fbff;
+  font-weight: bolder;
+  font-size: 36px;
+  font-family: myMashetic;
+  text-align: left;
+  width: 90%;
+}
+body main .myAbout .intro {
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* This allows the content to wrap on smaller screens */
+}
+body main .myAbout .intro .introContent {
+  width: 45%;
+  min-height: 50vh;
+  height: auto;
+}
+body main .myAbout .intro .introContent p {
+  margin-top: 10px;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+}
+body main .myAbout .intro .coderPic {
+  background-color: #000033;
+  width: 45%;
+  height: auto;
+}
+body main .myAbout .intro .coderPic img {
+  width: 100%;
+  height: 70vh; /* Ensure the image maintains its aspect ratio */
+  /* Prevent the image from exceeding the container */
+}
+body main .education {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .education .eduContent {
+  width: 90%;
+  height: 80%;
+}
+body main .education .eduContent .eduDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+}
+body main .education .eduContent .eduDetails .cardsContainer {
+  width: 55%;
+}
+body main .education .eduContent .eduDetails .cardsContainer .educationCard {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  padding: 15px;
+  background-color: #80fbff;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px white;
+}
+body main .education .eduContent .eduDetails .cardsContainer .educationCard:hover {
+  background-color: #11d1d8;
+}
+body main .education .eduContent .eduDetails .cardsContainer .educationCard .degreeName,
+body main .education .eduContent .eduDetails .cardsContainer .educationCard .eduInstitute {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+}
+body main .education .eduContent .eduDetails .cardsContainer .educationCard .BSCapImgBox {
+  margin-right: 10px;
+}
+body main .education .eduContent .eduDetails .cardsContainer .educationCard .BSCapImgBox img {
+  border-radius: 50%;
+}
+body main .education .eduContent .eduDetails .eduSVGContainer {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .education .eduContent .eduDetails .eduSVGContainer img {
+  width: 100%;
+  height: 100;
+}
+body main .titleHeading {
+  color: #80fbff;
+  font-weight: bolder;
+  font-size: 36px;
+  font-family: myMashetic;
+  margin-bottom: 40px;
+}
+body .skills {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body .skills .skillHeading {
+  width: 100%;
+  height: 25vh;
+  padding-top: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .skills .skillHeading h1 {
+  font-size: 36px;
+  font-family: myMashetic;
+  color: #80fbff;
+}
+body .skills .skillContent {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body .skills .skillContent .sliderContainer {
+  display: flex;
+  width: max-content;
+  animation: scroll 90s linear infinite;
+}
+body .skills .skillContent .sliderContainer .skillBox {
+  width: 250px;
+  /* Smaller and consistent size */
+  height: 150px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  font-size: 16;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  box-shadow: 0 0 10px 5px #80fbff;
+  /* Shadow on all sides */
+  transition: transform 0.5s ease-in-out;
+}
+body .skills .skillContent .sliderContainer .skillBox p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 15px;
+}
+body .skills .skillContent .sliderContainer .skillBox:hover {
+  transform: scale(1.1);
+}
+body .projects {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .projects .projectTitleText {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .projects .projectTitleText h1 {
+  color: #80fbff;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: myMashetic;
+}
+body .projects .projectContentContainer {
+  width: 90vw;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .projects .projectContentContainer .projectBox {
+  width: 25vw;
+  min-height: 55vh;
+  background-color: #80fbff;
+  box-shadow: 0 0 10px 10px rgb(209, 209, 209);
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  overflow: hidden;
+}
+body .projects .projectContentContainer .projectBox p {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+body .projects .projectContentContainer .projectBox a {
+  background-color: White;
+  padding: 5px 35px;
+  border-radius: 25px;
+}
+body .projects .projectContentContainer .projectBox a:hover {
+  background-color: #b3e2eb;
+}
+body .projects .projectContentContainer .projectBox .hoverText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(76, 244, 247, 0.8) 0%, rgba(0, 0, 51, 0.8) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+body .projects .projectContentContainer .projectBox .hoverText p {
+  padding: 5px;
+  width: 23vw;
+  border-top-right-radius: 15px;
+  align-items: start;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+  background-color: cadetblue;
+}
+body .projects .projectContentContainer .projectBox .hoverText a {
+  width: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  box-shadow: 0 0 5px 5px blue;
+}
+body .projects .projectContentContainer .projectBox .hoverText ul {
+  list-style: none;
+  background-color: blueviolet;
+  border-bottom-left-radius: 15px;
+  align-items: end;
+  margin-left: 12vw;
+  width: 13vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .projects .projectContentContainer .projectBox .hoverText ul li {
+  padding: 5px;
+  text-align: right;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+}
+body .projects .projectContentContainer .projectBox:hover .hoverText {
+  opacity: 1;
+}
+body .contact {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .contact .contactHeadingBox {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .contact .contactHeadingBox h1 {
+  font-size: 36px;
+  font-family: myMashetic;
+  color: #80fbff;
+}
+body .contact .contactContentContainer {
+  width: 80vw;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .contact .contactContentContainer .contactFormContainer {
+  width: 45vw;
+  height: 90%;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px 5px #80fbff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .contact .contactContentContainer .contactFormContainer .contactHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+body .contact .contactContentContainer .contactFormContainer .contactHeading h2 span {
+  color: #80fbff;
+}
+body .contact .contactContentContainer .contactFormContainer div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+body .contact .contactContentContainer .contactFormContainer div input {
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 3px #80fbff;
+  padding: 10px;
+  width: 45%;
+  color: white;
+}
+body .contact .contactContentContainer .contactFormContainer div input::placeholder {
+  color: white;
+}
+body .contact .contactContentContainer .contactFormContainer div textarea {
+  width: 100%;
+  height: 20vh;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px 3px #80fbff;
+  border-radius: 5px;
+  padding: 10px;
+}
+body .contact .contactContentContainer .contactFormContainer div textarea::placeholder {
+  color: white;
+}
+body .contact .contactContentContainer .contactFormContainer div button {
+  font-weight: bolder;
+  padding: 1.5vh 2vw 1.5vh 2vw;
+  color: rgb(0, 0, 0);
+  background-color: #80fbff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 3px 3px 3px white;
+}
+body .contact .contactContentContainer .mediaLinksContainer {
+  width: 34vw;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .contact .contactContentContainer .mediaLinksContainer .contactCardBox {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+body .contact .contactContentContainer .mediaLinksContainer .contactCardBox img {
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px white;
+}
+body .contact .contactContentContainer .mediaLinksContainer .contactCardBox a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 769px) {
+  #DesktopView {
+    display: none !important;
+  }
+  .Home .homeContent .profilePic {
+    width: 40%;
+    height: 100%;
+  }
+  .Home .homeContent .profilePic img {
+    width: 40vw !important;
+    height: 50vh !important; /* Adjust the height to keep the aspect ratio */
+    filter: drop-shadow(10px 10px 15px white);
+    border-radius: 50%;
+    border: 3px solid #80fbff;
+  }
+  .myAbout {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .myAbout .introHeading {
+    font-size: 24px;
+  }
+  .myAbout .intro {
+    width: 100%; /* Utilize the full width of the mobile screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around !important;
+  }
+  .myAbout .intro .introContent {
+    width: 90% !important;
+    min-height: 25vh !important;
+    height: auto !important;
+  }
+  .myAbout .intro .introContent p {
+    margin-top: 10px;
+    font-size: medium !important;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px !important;
+  }
+  .myAbout .intro .coderPic {
+    background-color: #000033;
+    width: 90% !important;
+    height: auto !important;
+  }
+  .myAbout .intro .coderPic img {
+    width: 100%;
+    height: 50vh !important; /* Maintain the aspect ratio */
+  }
+  .education {
+    min-height: 165vh;
+  }
+  .education .eduContent .eduDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .education .eduContent .eduDetails .cardsContainer {
+    width: 90vw !important;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .education .eduContent .eduDetails .cardsContainer .educationCard {
+    align-items: center;
+    width: 90vw !important;
+  }
+  .education .eduContent .eduDetails .cardsContainer .educationCard .degreeName,
+  .education .eduContent .eduDetails .cardsContainer .educationCard .eduInstitute {
+    font-size: 14px;
+  }
+  .education .eduContent .eduDetails .eduSVGContainer {
+    width: 60vw !important;
+  }
+  .education .eduContent .eduDetails .eduSVGContainer img {
+    width: 100%;
+    height: 100%;
+  }
+  .titleHeading {
+    font-size: 24px;
+  }
+  .skills {
+    margin-top: 50px;
+  }
+  .skills .skillHeading h1 {
+    font-size: 24px;
+  }
+  .projects {
+    min-height: 250vh !important;
+    flex-direction: column;
+  }
+  .projects .projectTitleText {
+    margin-bottom: 20px;
+  }
+  .projects .projectTitleText h1 {
+    font-size: 18px;
+  }
+  .projects .projectContentContainer {
+    min-height: 200vh !important;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .projects .projectContentContainer .projectBox {
+    width: 55vw !important;
+    min-height: 60vh !important;
+    margin-bottom: 20px;
+  }
+  .projects .projectContentContainer .projectBox p {
+    font-size: 18px;
+  }
+  .projects .projectContentContainer .projectBox .hoverText {
+    background: linear-gradient(0deg, rgba(0, 0, 51, 0.8) 0%, rgba(76, 244, 247, 0.8) 100%);
+  }
+  .projects .projectContentContainer .projectBox .hoverText p {
+    padding: 5px;
+    width: 46vw !important;
+    border-top-right-radius: 15px;
+    align-items: start;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: lighter;
+    background-color: cadetblue;
+  }
+  .projects .projectContentContainer .projectBox .hoverText a {
+    width: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    box-shadow: 0 0 5px 5px blue;
+  }
+  .projects .projectContentContainer .projectBox .hoverText ul {
+    list-style: none;
+    background-color: blueviolet;
+    border-bottom-left-radius: 15px;
+    align-items: end;
+    margin-left: 30vw !important;
+    width: 25vw !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .projects .projectContentContainer .projectBox .hoverText ul li {
+    padding: 5px;
+    text-align: right;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: lighter;
+  }
+  .projects .projectContentContainer .projectBox:hover .hoverText {
+    opacity: 1;
+  }
+  .contact {
+    min-height: 100vh !important;
+    flex-direction: column;
+  }
+  .contact .contactHeadingBox {
+    margin-bottom: 25px;
+  }
+  .contact .contactHeadingBox h1 {
+    font-size: 16px;
+  }
+  .contact .contactContentContainer {
+    width: 90vw !important;
+    min-height: 95vh !important;
+    flex-direction: column;
+  }
+  .contact .contactContentContainer .contactFormContainer {
+    width: 85vw !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .contactContentContainer .contactFormContainer .contactHeading {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .contact .contactContentContainer .contactFormContainer div {
+    width: 80vw !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .contactContentContainer .contactFormContainer div input {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 3px #80fbff;
+    padding: 10px;
+    width: 76vw !important;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .contact .contactContentContainer .contactFormContainer div input::placeholder {
+    color: white;
+  }
+  .contact .contactContentContainer .contactFormContainer div textarea {
+    width: 76vw !important;
+    margin-bottom: 20px;
+  }
+  .contact .contactContentContainer .contactFormContainer div button {
+    font-weight: bolder;
+    padding: 1.5vh 2vw 1.5vh 2vw;
+    color: rgb(0, 0, 0);
+    background-color: #80fbff;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 3px white;
+  }
+  .contact .contactContentContainer .mediaLinksContainer {
+    width: 86vw !important;
+    min-height: 60vh !important;
+    margin-top: 25px;
+  }
+}
+@media (min-width: 769px) {
+  #MobileView {
+    display: none !important;
+  }
+}
+@media (max-width: 700px) {
+  #DesktopView {
+    display: none !important;
+  }
+  .Home {
+    width: 100%;
+    height: auto !important;
+    padding-top: 5vh !important;
+  }
+  .Home .homeContent {
+    width: 75vw;
+    height: auto !important;
+    flex-direction: column-reverse;
+  }
+  .Home .homeContent .about {
+    width: 85vw !important;
+  }
+  .Home .homeContent .about .btn {
+    width: 85vw !important;
+  }
+  .Home .homeContent .profilePic img {
+    width: 30vw !important;
+    height: 40vh !important; /* Adjust the height to keep the aspect ratio */
+    filter: drop-shadow(10px 10px 15px white);
+    border-radius: 50%;
+    border: 3px solid #80fbff;
+  }
+}
+@media (max-width: 600px) {
+  #DesktopView {
+    display: none !important;
+  }
+  .Home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
+  .Home .homeContent .about p {
+    margin-bottom: 15px;
+  }
+  .Home .homeContent .about .hello {
+    font-size: 18px !important;
+  }
+  .Home .homeContent .about .name {
+    font-size: 24px !important;
+    font-weight: bold;
+  }
+  .Home .homeContent .about .jobTitles {
+    font-size: 14px !important;
+  }
+  .Home .homeContent .about .btn button {
+    padding: 8px 20px !important;
+  }
+  .Home .homeContent .profilePic {
+    width: 50% !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Home .homeContent .profilePic img {
+    width: 35vw !important;
+    height: 35vh !important; /* Adjust the height to keep the aspect ratio */
+    filter: drop-shadow(10px 10px 15px white);
+    border-radius: 50%;
+    border: 3px solid #80fbff;
+  }
+  .projects .projectContentContainer .projectBox {
+    width: 80vw !important;
+  }
+  .skills {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .skills .skillHeading {
+    width: 100%;
+    height: 25vh;
+    padding-top: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills .skillHeading h1 {
+    font-size: 36px;
+    font-family: myMashetic;
+    color: #80fbff;
+  }
+  .skills .skillContent {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .skills .skillContent .sliderContainer {
+    display: flex;
+    width: max-content;
+    animation: scroll 90s linear infinite;
+  }
+  .skills .skillContent .sliderContainer .skillBox {
+    width: 150px !important;
+    /* Smaller and consistent size */
+    height: 150px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    font-size: 16;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    box-shadow: 0 0 10px 5px #80fbff;
+    /* Shadow on all sides */
+    transition: transform 0.5s ease-in-out;
+  }
+  .skills .skillContent .sliderContainer .skillBox p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+  }
+  .skills .skillContent .sliderContainer .skillBox:hover {
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 430px) {
+  #DesktopView {
+    display: none !important;
+  }
+  p {
+    font-size: 14px;
+  }
+  .Home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
+  .Home .homeContent {
+    width: 75vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Home .homeContent .about {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .Home .homeContent .about p {
+    margin-bottom: 15px;
+  }
+  .Home .homeContent .about .hello {
+    font-size: 16px !important;
+  }
+  .Home .homeContent .about .name {
+    font-size: 22px !important;
+    font-weight: bold;
+  }
+  .Home .homeContent .about .jobTitles {
+    font-size: 12px !important;
+  }
+  .Home .homeContent .about .btn a {
+    padding: 5px 15px !important;
+    margin-right: 10px !important;
+  }
+  .Home .homeContent .profilePic {
+    width: 50% !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Home .homeContent .profilePic img {
+    width: 35vw !important;
+    height: 35vh !important; /* Adjust the height to keep the aspect ratio */
+    filter: drop-shadow(10px 10px 15px white);
+    border-radius: 50%;
+    border: 3px solid #80fbff;
+  }
+  #projectTitleText, #contactTitleText, #introTitleText, #eduTitleText, #skillTitleText {
+    font-size: 24px !important;
+  }
+  .education .eduContent .eduDetails .cardsContainer .educationCard .degreeName,
+  .education .eduContent .eduDetails .cardsContainer .educationCard .eduInstitute {
+    font-size: 16px !important;
+  }
+  .projects .projectContentContainer .projectBox {
+    width: 85vw !important;
+  }
+  .projects .projectContentContainer .projectBox p {
+    font-size: 20px !important;
+  }
+  .projects .projectContentContainer .projectBox .projectIcon {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .projects .projectContentContainer .projectBox .projectIconMedi {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .projects .projectContentContainer .projectBox a {
+    background-color: White;
+    padding: 5px 35px;
+    border-radius: 25px;
+  }
+  .projects .projectContentContainer .projectBox a:hover {
+    background-color: #b3e2eb;
+  }
+  .projects .projectContentContainer .projectBox .hoverText p {
+    font-size: 15px !important;
+  }
+  .projects .projectContentContainer .projectBox .hoverText a {
+    width: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    box-shadow: 0 0 5px 5px blue;
+  }
+  .projects .projectContentContainer .projectBox .hoverText ul li {
+    font-size: 14px !important;
+  }
+  .projects .projectContentContainer .projectBox:hover .hoverText {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
