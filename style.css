@@ -820,14 +820,14 @@ body .contact .contactContentContainer .mediaLinksContainer .contactCardBox a {
     padding: 8px 20px !important;
   }
   .Home .homeContent .profilePic {
-    width: 50% !important;
+    width: 70% !important;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .Home .homeContent .profilePic img {
-    width: 35vw !important;
+    width: 50vw !important;
     height: 35vh !important; /* Adjust the height to keep the aspect ratio */
     filter: drop-shadow(10px 10px 15px white);
     border-radius: 50%;
@@ -942,14 +942,14 @@ body .contact .contactContentContainer .mediaLinksContainer .contactCardBox a {
     margin-right: 10px !important;
   }
   .Home .homeContent .profilePic {
-    width: 50% !important;
+    width: 80% !important;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .Home .homeContent .profilePic img {
-    width: 35vw !important;
+    width: 60vw !important;
     height: 35vh !important; /* Adjust the height to keep the aspect ratio */
     filter: drop-shadow(10px 10px 15px white);
     border-radius: 50%;
